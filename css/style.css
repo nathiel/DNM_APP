@@ -185,25 +185,25 @@ body.menu-active div#content .menu-trigger {
 }
 .box_1{
 	width:50%;
-	height:160px;
+	height:250px;
 	background:#000;
 	float:left;
 }
 .box_2{
 	width:50%;
-	height:160px;
+	height:250px;
 	background:#033;
 	float:left;
 }
 .box_2_mini{
 	width:100%;
-	height:80px;
+	height:125px;
 	background:#fff;
 	float:left;
 }
 .box_2_mini_color{
 	width:50%;
-	height:80px;
+	height:125px;
 	background:#036;
 	float:left;
 }
