@@ -19,7 +19,10 @@ body {
   color: #353d46;
   font: 18px/27px, sans-serif;
 }
-
+iframe {
+	border:none;
+	overflow:hidden;
+}
 h1, h2, h3 {
   color: #FFf;
   margin: 0 0 0 50px;
