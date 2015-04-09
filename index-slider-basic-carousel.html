@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Departamento Nacional de Missões</title>
+        <title>Smarty Mobile Website Template</title>
         <!-- All Stylesheets -->
         <link rel="stylesheet"  href="css/All-Stylesheets.css">
         <!-- Add 2 Home -->
@@ -27,7 +27,7 @@
         <div data-role="page" id="page" data-theme="d">
             <!-- header Starts -->
             <div data-role="header" data-theme="f" class="header">
-                <h1><a href="index.html" rel="external">DNM / AICEB</a></h1>
+                <h1><a href="index.html" rel="external">SMARTY</a></h1>
                 <a href="#left-panel" data-shadow="false" ><i class="fa fa-indent fa-2x"></i></a>
                 <a href="#right-panel" data-shadow="false" ><i class="fa fa-bars fa-2x"></i></a>
             </div>
@@ -35,33 +35,16 @@
             <div data-role="content">
                 <!-- Slider Starts -->
                 <div class="banner">
-                    <div class="flexslider" style="margin-bottom:35px;">
-                        <ul class="slides">
-                            <li data-thumb="images/slider/1.jpg"> 
-                                <img src="images/slider/1.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/2.jpg"> 
-                                <img src="images/slider/2.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/3.jpg"> 
-                                <img src="images/slider/3.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/4.jpg"> 
-                                <img src="images/slider/4.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/5.jpg"> 
-                                <img src="images/slider/5.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/6.jpg"> 
-                                <img src="images/slider/6.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/7.jpg"> 
-                                <img src="images/slider/7.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/8.jpg"> 
-                                <img src="images/slider/8.jpg" /> 
-                            </li>
-                        </ul>
+                    <div id="basic-carousel" class="owl-carousel">
+                        <div class="item"><img src="images/slider/basic-carousel/1.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/2.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/3.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/4.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/5.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/6.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/7.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/8.jpg" alt=""></div>
+                        <div class="item"><img src="images/slider/basic-carousel/9.jpg" alt=""></div>
                     </div>
                 </div>
                 <!-- Slider Ends -->
@@ -175,7 +158,7 @@
                 <div id="accordion">
                     <ul id="items">
                         <li>
-                            <a href="index.html" rel="external" class="activated"><i class="fa fa-home fa-2x"></i>HOME</a>
+                            <a href="index.html" rel="external"><i class="fa fa-home fa-2x"></i>HOME</a>
                         </li>
                         <li>
                             <a href="about-us.html" rel="external"><i class="fa fa-lightbulb-o fa-2x"></i>ABOUT US</a>
@@ -359,23 +342,6 @@
             	$(".tweets").liveTweets({operator: "#google", liveTweetsToken: "R8l0mjc5sbfmSB1fRdKB15T19mGfI8mpnnfvWipmo"});
             });
         </script>
-        <script>window.jQuery || document.write('<script src="flexslider/js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
-        <!-- FlexSlider --> 
-        <script defer src="flexslider/jquery.flexslider.js"></script> 
-        <script type="text/javascript">
-            $(function(){
-              SyntaxHighlighter.all();
-            });
-            $(window).load(function(){
-              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
-              });
-            });
-        </script> 
         <!-- Retina Display -->
         <script src="js/Retina/retina.js"></script>
     </body>

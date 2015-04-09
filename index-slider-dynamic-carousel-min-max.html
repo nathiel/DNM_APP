@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Departamento Nacional de Missões</title>
+        <title>Smarty Mobile Website Template</title>
         <!-- All Stylesheets -->
         <link rel="stylesheet"  href="css/All-Stylesheets.css">
         <!-- Add 2 Home -->
@@ -27,7 +27,7 @@
         <div data-role="page" id="page" data-theme="d">
             <!-- header Starts -->
             <div data-role="header" data-theme="f" class="header">
-                <h1><a href="index.html" rel="external">DNM / AICEB</a></h1>
+                <h1><a href="index.html" rel="external">SMARTY</a></h1>
                 <a href="#left-panel" data-shadow="false" ><i class="fa fa-indent fa-2x"></i></a>
                 <a href="#right-panel" data-shadow="false" ><i class="fa fa-bars fa-2x"></i></a>
             </div>
@@ -35,32 +35,14 @@
             <div data-role="content">
                 <!-- Slider Starts -->
                 <div class="banner">
-                    <div class="flexslider" style="margin-bottom:35px;">
+                    <div class="flexslider carousel">
                         <ul class="slides">
-                            <li data-thumb="images/slider/1.jpg"> 
-                                <img src="images/slider/1.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/2.jpg"> 
-                                <img src="images/slider/2.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/3.jpg"> 
-                                <img src="images/slider/3.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/4.jpg"> 
-                                <img src="images/slider/4.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/5.jpg"> 
-                                <img src="images/slider/5.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/6.jpg"> 
-                                <img src="images/slider/6.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/7.jpg"> 
-                                <img src="images/slider/7.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/8.jpg"> 
-                                <img src="images/slider/8.jpg" /> 
-                            </li>
+                            <li> <img src="images/slider/1.jpg" /> </li>
+                            <li> <img src="images/slider/2.jpg" /> </li>
+                            <li> <img src="images/slider/3.jpg" /> </li>
+                            <li> <img src="images/slider/4.jpg" /> </li>
+                            <li> <img src="images/slider/5.jpg" /> </li>
+                            <li> <img src="images/slider/6.jpg" /> </li>
                         </ul>
                     </div>
                 </div>
@@ -175,7 +157,7 @@
                 <div id="accordion">
                     <ul id="items">
                         <li>
-                            <a href="index.html" rel="external" class="activated"><i class="fa fa-home fa-2x"></i>HOME</a>
+                            <a href="index.html" rel="external"><i class="fa fa-home fa-2x"></i>HOME</a>
                         </li>
                         <li>
                             <a href="about-us.html" rel="external"><i class="fa fa-lightbulb-o fa-2x"></i>ABOUT US</a>
@@ -360,22 +342,51 @@
             });
         </script>
         <script>window.jQuery || document.write('<script src="flexslider/js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
-        <!-- FlexSlider --> 
-        <script defer src="flexslider/jquery.flexslider.js"></script> 
+        <!-- FlexSlider -->
+        <script defer src="flexslider/jquery.flexslider.js"></script>
         <script type="text/javascript">
-            $(function(){
-              SyntaxHighlighter.all();
-            });
-            $(window).load(function(){
-              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
+            (function() {
+            
+              // store the slider in a local variable
+              var $window = $(window),
+                  flexslider;
+            
+              // tiny helper function to add breakpoints
+              function getGridSize() {
+                return (window.innerWidth < 600) ? 2 :
+                       (window.innerWidth < 900) ? 3 : 4;
+              }
+            
+              $(function() {
+                SyntaxHighlighter.all();
               });
-            });
-        </script> 
+            
+              $window.load(function() {
+                $('.flexslider').flexslider({
+                  animation: "slide",
+                  animationSpeed: 400,
+                  animationLoop: false,
+                  itemWidth: 210,
+                  itemMargin: 5,
+                  minItems: getGridSize(), // use function to pull in initial value
+                  maxItems: getGridSize(), // use function to pull in initial value
+                  start: function(slider){
+                    $('body').removeClass('loading');
+                    flexslider = slider;
+                  }
+                });
+              });
+            
+              // check grid size on resize event
+              $window.resize(function() {
+                var gridSize = getGridSize();
+            
+                flexslider.vars.minItems = gridSize;
+                flexslider.vars.maxItems = gridSize;
+              });
+            }());
+            
+        </script>
         <!-- Retina Display -->
         <script src="js/Retina/retina.js"></script>
     </body>

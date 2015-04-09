@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Departamento Nacional de Missões</title>
+        <title>Smarty Mobile Website Template</title>
         <!-- All Stylesheets -->
         <link rel="stylesheet"  href="css/All-Stylesheets.css">
         <!-- Add 2 Home -->
@@ -27,44 +27,26 @@
         <div data-role="page" id="page" data-theme="d">
             <!-- header Starts -->
             <div data-role="header" data-theme="f" class="header">
-                <h1><a href="index.html" rel="external">DNM / AICEB</a></h1>
+                <h1><a href="index.html" rel="external">SMARTY</a></h1>
                 <a href="#left-panel" data-shadow="false" ><i class="fa fa-indent fa-2x"></i></a>
                 <a href="#right-panel" data-shadow="false" ><i class="fa fa-bars fa-2x"></i></a>
             </div>
             <!-- header Ends -->
             <div data-role="content">
-                <!-- Slider Starts -->
                 <div class="banner">
-                    <div class="flexslider" style="margin-bottom:35px;">
+                    <!-- Slider Starts -->
+                    <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="images/slider/1.jpg"> 
-                                <img src="images/slider/1.jpg" /> 
+                            <li>
+                                <iframe id="player_1" src="http://fast.wistia.com/embed/iframe/t4yniozocs?controlsVisibleOnLoad=true&amp;playerColor=474745&amp;version=v1&amp;videoHeight=366&amp;videoWidth=650&amp;volumeControl=true&videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="650" height="366"></iframe>
                             </li>
-                            <li data-thumb="images/slider/2.jpg"> 
-                                <img src="images/slider/2.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/3.jpg"> 
-                                <img src="images/slider/3.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/4.jpg"> 
-                                <img src="images/slider/4.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/5.jpg"> 
-                                <img src="images/slider/5.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/6.jpg"> 
-                                <img src="images/slider/6.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/7.jpg"> 
-                                <img src="images/slider/7.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/8.jpg"> 
-                                <img src="images/slider/8.jpg" /> 
-                            </li>
+                            <li> <img src="images/slider/1.jpg" /> </li>
+                            <li> <img src="images/slider/2.jpg" /> </li>
+                            <li> <img src="images/slider/3.jpg" /> </li>
                         </ul>
                     </div>
+                    <!-- Slider Ends -->
                 </div>
-                <!-- Slider Ends -->
                 <!-- Welcome Text Starts -->
                 <div class="welcome-text">
                     <h1><span class="normal">WELCOME TO </span>SMARTY</h1>
@@ -175,7 +157,7 @@
                 <div id="accordion">
                     <ul id="items">
                         <li>
-                            <a href="index.html" rel="external" class="activated"><i class="fa fa-home fa-2x"></i>HOME</a>
+                            <a href="index.html" rel="external"><i class="fa fa-home fa-2x"></i>HOME</a>
                         </li>
                         <li>
                             <a href="about-us.html" rel="external"><i class="fa fa-lightbulb-o fa-2x"></i>ABOUT US</a>
@@ -367,15 +349,52 @@
               SyntaxHighlighter.all();
             });
             $(window).load(function(){
-              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
+            
+              // Vimeo API nonsense
+              var player = document.getElementById('player_1');
+              $f(player).addEvent('ready', ready);
+            
+              function addEvent(element, eventName, callback) {
+                (element.addEventListener) ? element.addEventListener(eventName, callback, false) : element.attachEvent(eventName, callback, false);
+              }
+            
+              function ready(player_id) {
+                var froogaloop = $f(player_id);
+            
+                froogaloop.addEvent('play', function(data) {
+                  $('.flexslider').flexslider("pause");
+                });
+            
+                froogaloop.addEvent('pause', function(data) {
+                  $('.flexslider').flexslider("play");
+                });
+              }
+            
+            
+              // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+              $(".flexslider")
+                .fitVids()
+                .flexslider({
+                  animation: "slide",
+                  useCSS: false,
+                  animationLoop: false,
+                  smoothHeight: true,
+                  start: function(slider){
+                    $('body').removeClass('loading');
+                  },
+                  before: function(slider){
+                    $f(player).api('pause');
+                  }
               });
             });
         </script> 
+        <!-- Syntax Highlighter --> 
+        <script type="text/javascript" src="flexslider/js/shCore.js"></script> 
+        <script type="text/javascript" src="flexslider/js/shBrushXml.js"></script> 
+        <script type="text/javascript" src="flexslider/js/shBrushJScript.js"></script> 
+        <!-- Optional FlexSlider Additions --> 
+        <script src="flexslider/js/froogaloop.js"></script> 
+        <script src="flexslider/js/jquery.fitvid.js"></script> 
         <!-- Retina Display -->
         <script src="js/Retina/retina.js"></script>
     </body>
