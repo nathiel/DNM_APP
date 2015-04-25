@@ -20,6 +20,18 @@
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
         <!-- Glyphicons -->
         <script type="text/javascript" async src="js/glyphicons/ga.js"></script>
+        <!-- Photoswipe -->
+        <script type="text/javascript" src="photoswipe/lib/klass.min.js"></script>
+        <script type="text/javascript" src="photoswipe/code.photoswipe-3.0.4.min.js"></script>
+        <script type="text/javascript">
+            (function(window, PhotoSwipe){
+            	document.addEventListener('DOMContentLoaded', function(){
+            		var
+            			options = {},
+            			instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+            	}, false);
+            }(window, window.Code.PhotoSwipe));
+        </script>
     </head>
     <body>
         <!-- Page Contents Starts
@@ -27,7 +39,7 @@
         <div data-role="page" id="page" data-theme="d">
             <!-- header Starts -->
             <div data-role="header" data-theme="f" class="header">
-                <h1><a href="index.html" rel="external">DNM</a></h1>
+                <h1><a href="index.html" rel="external">PROJETOS</a></h1>
                 <a href="#left-panel" data-shadow="false" ><i class="fa fa-indent fa-2x"></i></a>
                 <a href="#right-panel" data-shadow="false" ><i class="fa fa-bars fa-2x"></i></a>
             </div>
@@ -35,49 +47,82 @@
             <div data-role="content">
                 <!-- Slider Starts -->
                 <div class="banner">
-                    <div class="flexslider" style="margin-bottom:35px;">
-                        <ul class="slides">
-                            <li data-thumb="images/slider/1.jpg"> 
-                                <img src="images/slider/1.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/2.jpg"> 
-                                <img src="images/slider/2.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/3.jpg"> 
-                                <img src="images/slider/3.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/4.jpg"> 
-                                <img src="images/slider/4.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/5.jpg"> 
-                                <img src="images/slider/5.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/6.jpg"> 
-                                <img src="images/slider/6.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/7.jpg"> 
-                                <img src="images/slider/7.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/8.jpg"> 
-                                <img src="images/slider/8.jpg" /> 
-                            </li>
-                        </ul>
-                    </div>
+                   <a href="ctbch.html" target="_self"><img src="images/photo-gallery/ctbch.jpg" width="100%"></a>
                 </div>
                 <!-- Slider Ends -->
-                <!-- Welcome Text Starts -->
-                <div class="welcome-text">
-                    <h1><span class="normal">Seja Bem Vindo ao nosso </span>Aplicativo</h1>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. <a href="contact-us.html" rel="external">Vestibulum</a> tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
-                </div>
-               
-                <!-- Footer Starts -->
-              <div class="footer">© 2015. Todos os Direitos Reservados.</div>
-                <!-- Footer Ends -->
+                <h1 class="icon-heading">CTBCH</h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
             </div>
             <!-- /content -->
-            <!-- Left Panel Starts
-                ================================================== -->
+            
+            <div data-role="content">
+                <!-- Slider Starts -->
+                <div class="banner">
+                    <img src="images/photo-gallery/vai.jpg" width="100%">
+                </div>
+                <!-- Slider Ends -->
+                <h1 class="icon-heading">MISSÃO <span class="normal">VAI</span></h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
+            </div>
+            
+            <div data-role="content">
+                <!-- Slider Starts -->
+                <div class="banner">
+                    <img src="images/photo-gallery/angola.jpg" width="100%">
+                </div>
+                <!-- Slider Ends -->
+                <h1 class="icon-heading">PROJETO <span class="normal">ANGOLA</span></h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
+            </div>
+            
+            <div data-role="content">
+                <!-- Slider Starts -->
+                <div class="banner">
+                    <img src="images/photo-gallery/uruguai.jpg" width="100%">
+                </div>
+                <!-- Slider Ends -->
+                <h1 class="icon-heading">PROMIFÉ</h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
+            </div>
+            
+            <div data-role="content">
+                <!-- Slider Starts -->
+                <div class="banner">
+                    <img src="images/photo-gallery/apr.jpg" width="100%">
+                </div>
+                <!-- Slider Ends -->
+                <h1 class="icon-heading">PRÓ <span class="normal">RIBEIRINHO</span></h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
+            </div>
+            
+            <div data-role="content">
+                <!-- Slider Starts -->
+                <div class="banner">
+                    <img src="images/photo-gallery/sertao.jpg" width="100%">
+                </div>
+                <!-- Slider Ends -->
+                <h1 class="icon-heading">PRÓ <span class="normal">SERTÃO</span></h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                
+                
+            </div>
+            
             <!-- Left Panel Starts
                 ================================================== -->
             <div data-role="panel" id="left-panel" data-theme="b">
@@ -170,7 +215,7 @@
         <script src="owl-carousel/owl-carousel/owl.carousel.js"></script> 
         <!-- Custom JS File -->
         <script src="js/custom.js"></script> 
-        <script src="menu/js/main.js"></script>    
+		<script src="menu/js/main.js"></script>     
         <!-- Twitter -->
         <script src="js/tweets/twitlive-min.js"></script>
         <script>
@@ -191,23 +236,6 @@
             	$(".tweets").liveTweets({operator: "#google", liveTweetsToken: "R8l0mjc5sbfmSB1fRdKB15T19mGfI8mpnnfvWipmo"});
             });
         </script>
-        <script>window.jQuery || document.write('<script src="flexslider/js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
-        <!-- FlexSlider --> 
-        <script defer src="flexslider/jquery.flexslider.js"></script> 
-        <script type="text/javascript">
-            $(function(){
-              SyntaxHighlighter.all();
-            });
-            $(window).load(function(){
-              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
-              });
-            });
-        </script> 
         <!-- Retina Display -->
         <script src="js/Retina/retina.js"></script>
     </body>

@@ -20,6 +20,18 @@
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
         <!-- Glyphicons -->
         <script type="text/javascript" async src="js/glyphicons/ga.js"></script>
+        <!-- Photoswipe -->
+        <script type="text/javascript" src="photoswipe/lib/klass.min.js"></script>
+        <script type="text/javascript" src="photoswipe/code.photoswipe-3.0.4.min.js"></script>
+        <script type="text/javascript">
+            (function(window, PhotoSwipe){
+            	document.addEventListener('DOMContentLoaded', function(){
+            		var
+            			options = {},
+            			instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+            	}, false);
+            }(window, window.Code.PhotoSwipe));
+        </script>
     </head>
     <body>
         <!-- Page Contents Starts
@@ -27,57 +39,41 @@
         <div data-role="page" id="page" data-theme="d">
             <!-- header Starts -->
             <div data-role="header" data-theme="f" class="header">
-                <h1><a href="index.html" rel="external">DNM</a></h1>
+                <h1><a href="index.html" rel="external">PROJETOS</a></h1>
                 <a href="#left-panel" data-shadow="false" ><i class="fa fa-indent fa-2x"></i></a>
                 <a href="#right-panel" data-shadow="false" ><i class="fa fa-bars fa-2x"></i></a>
             </div>
             <!-- header Ends -->
             <div data-role="content">
                 <!-- Slider Starts -->
-                <div class="banner">
-                    <div class="flexslider" style="margin-bottom:35px;">
-                        <ul class="slides">
-                            <li data-thumb="images/slider/1.jpg"> 
-                                <img src="images/slider/1.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/2.jpg"> 
-                                <img src="images/slider/2.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/3.jpg"> 
-                                <img src="images/slider/3.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/4.jpg"> 
-                                <img src="images/slider/4.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/5.jpg"> 
-                                <img src="images/slider/5.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/6.jpg"> 
-                                <img src="images/slider/6.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/7.jpg"> 
-                                <img src="images/slider/7.jpg" /> 
-                            </li>
-                            <li data-thumb="images/slider/8.jpg"> 
-                                <img src="images/slider/8.jpg" /> 
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="banner"><img src="images/photo-gallery/2.jpg" width="100%"></div>
                 <!-- Slider Ends -->
-                <!-- Welcome Text Starts -->
-                <div class="welcome-text">
-                    <h1><span class="normal">Seja Bem Vindo ao nosso </span>Aplicativo</h1>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. <a href="contact-us.html" rel="external">Vestibulum</a> tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
-                </div>
-               
-                <!-- Footer Starts -->
-              <div class="footer">© 2015. Todos os Direitos Reservados.</div>
-                <!-- Footer Ends -->
+                <h1 class="icon-heading">CTBCH</h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuaa fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                <hr>
+                <ul class="gallery" id="Gallery">
+                    <li><a href="images/photo-gallery/big/6.jpg" rel="external"><img src="images/photo-gallery/thumbs/6.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/7.jpg" rel="external"><img src="images/photo-gallery/thumbs/7.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/8.jpg" rel="external"><img src="images/photo-gallery/thumbs/8.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/9.jpg" rel="external"><img src="images/photo-gallery/thumbs/9.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/10.jpg" rel="external"><img src="images/photo-gallery/thumbs/10.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/11.jpg" rel="external"><img src="images/photo-gallery/thumbs/11.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/12.jpg" rel="external"><img src="images/photo-gallery/thumbs/12.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/1.jpg" rel="external"><img src="images/photo-gallery/thumbs/1.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/2.jpg" rel="external"><img src="images/photo-gallery/thumbs/2.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/3.jpg" rel="external"><img src="images/photo-gallery/thumbs/3.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/4.jpg" rel="external"><img src="images/photo-gallery/thumbs/4.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/5.jpg" rel="external"><img src="images/photo-gallery/thumbs/5.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/13.jpg" rel="external"><img src="images/photo-gallery/thumbs/13.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/14.jpg" rel="external"><img src="images/photo-gallery/thumbs/14.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/15.jpg" rel="external"><img src="images/photo-gallery/thumbs/15.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/16.jpg" rel="external"><img src="images/photo-gallery/thumbs/16.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/17.jpg" rel="external"><img src="images/photo-gallery/thumbs/17.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                    <li><a href="images/photo-gallery/big/18.jpg" rel="external"><img src="images/photo-gallery/thumbs/18.jpg" alt="Lorem ipsum dolor sit amet "/></a></li>
+                </ul>
+                
             </div>
             <!-- /content -->
-            <!-- Left Panel Starts
-                ================================================== -->
             <!-- Left Panel Starts
                 ================================================== -->
             <div data-role="panel" id="left-panel" data-theme="b">
@@ -170,7 +166,7 @@
         <script src="owl-carousel/owl-carousel/owl.carousel.js"></script> 
         <!-- Custom JS File -->
         <script src="js/custom.js"></script> 
-        <script src="menu/js/main.js"></script>    
+		<script src="menu/js/main.js"></script>     
         <!-- Twitter -->
         <script src="js/tweets/twitlive-min.js"></script>
         <script>
@@ -191,23 +187,6 @@
             	$(".tweets").liveTweets({operator: "#google", liveTweetsToken: "R8l0mjc5sbfmSB1fRdKB15T19mGfI8mpnnfvWipmo"});
             });
         </script>
-        <script>window.jQuery || document.write('<script src="flexslider/js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
-        <!-- FlexSlider --> 
-        <script defer src="flexslider/jquery.flexslider.js"></script> 
-        <script type="text/javascript">
-            $(function(){
-              SyntaxHighlighter.all();
-            });
-            $(window).load(function(){
-              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
-              });
-            });
-        </script> 
         <!-- Retina Display -->
         <script src="js/Retina/retina.js"></script>
     </body>
